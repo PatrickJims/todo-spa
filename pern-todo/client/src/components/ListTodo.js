@@ -28,7 +28,10 @@ const ListTodo = () => {
     //get the todo list
     const getTodos = async () => {
         try {
-            const response = await fetch('http://localhost:5000/auth/todos');
+            const response = await fetch('http://localhost:5000/auth/todos',{
+                method: 'GET',
+                headers: {token: localStorage.token}
+            });
             const jsonData = await response.json();
 
             setTodos(jsonData);
@@ -36,7 +39,6 @@ const ListTodo = () => {
         } catch (err) {
             console.error(err.message);
         }
-        console.log('data changed');
     }
     useEffect(() => {
         getTodos();

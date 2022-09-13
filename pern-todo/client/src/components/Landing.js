@@ -35,7 +35,7 @@ const Landing = ({setAuth}) => {
     <Fragment>
       <div className="container">
         <div className="row mt-5">
-          <div className="col"><h1 className="text-center">{ name } Input Todo</h1></div>
+          <div className="col"><h1 className="text-center">{ name } Todo List</h1></div>
           <div className="col d-flex justify-content-end">
             <button 
               className="btn btn-danger"

@@ -1,5 +1,5 @@
 //react toastify notification related
-//import { toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Fragment, useState, useEffect } from 'react';
@@ -17,7 +17,7 @@ import Landing from './components/Landing';
 import Register from './components/Register';
 import Login from './components/Login';
 
-//toast.configure()
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -25,9 +25,6 @@ function App() {
   const setAuth = (boolean) => {
     setIsAuthenticated(boolean);
   }
-  
-  
-
 
   useEffect(() => {
     async function isAuthEffect(){
@@ -48,6 +45,7 @@ function App() {
 
   return (
     <Fragment>
+      <ToastContainer />
       <Router>
         <Routes>
           <Route 

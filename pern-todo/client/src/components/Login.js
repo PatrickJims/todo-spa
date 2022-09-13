@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 
 const Login = ({setAuth}) => {
@@ -42,6 +43,7 @@ const Login = ({setAuth}) => {
 
   return (
     <Fragment>
+      <ToastContainer />
       <div className="container">
         <h1>Login page</h1>
         <form onSubmit={onSubmitForm}>
